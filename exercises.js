@@ -85,24 +85,19 @@ function isPrime(num) {
   //note: 0 and 1 are NOT considered prime numbers
   if (num === 0 || num === 1) {
     return false;
-  }
-
-  if (num === 2) {
-    return true;
-
   } else {
 
- for (var i = 3; i < num; i++) {
+ for (var i = 2; i < num - 1; i++) {
     var remainder = num % i;
-    if (remainder !== 0) {
+    if (remainder === 0) {
       return false;
     } else {
       return true;
     }
   }
-    
-  }
+ }   
 }
+
 
 function returnFirst(arr) {
   //return the first item from the array
